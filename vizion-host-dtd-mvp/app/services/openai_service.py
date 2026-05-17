@@ -7,7 +7,7 @@ client = AsyncOpenAI(api_key=settings.openai_api_key)
 
 async def run_json_prompt(system_prompt: str, user_prompt: str) -> str:
     response = await client.chat.completions.create(
-        model="gpt-4.1-mini",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -20,7 +20,7 @@ async def run_json_prompt(system_prompt: str, user_prompt: str) -> str:
 
 async def run_text_prompt(system_prompt: str, user_prompt: str) -> str:
     response = await client.chat.completions.create(
-        model="gpt-4.1-mini",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
